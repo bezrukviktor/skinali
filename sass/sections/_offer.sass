@@ -1,0 +1,86 @@
+.offer
+  padding: 129px 0
+  &__block
+    margin-top: -200px
+    padding: 80px
+    background: #fff url(../img/offer/form-bg.png) no-repeat center right
+    background-size: contain
+    box-shadow: 0px 15px 25px 0px rgba(0, 0, 0, 0.1)
+  &__title
+    font-size: 25px
+    text-transform: uppercase
+    margin-bottom: 30px
+    +bold
+  &__subtitle
+    display: block
+    font-size: 21px
+    margin-bottom: 48px
+
+.form
+  &__row
+    display: flex
+    align-items: center
+    max-width: 900px
+  &__row:not(:last-child)
+    margin-bottom: 25px  
+  &__label
+    display: block
+    font-size: 17px
+    margin-bottom: 15px
+  &__group
+    flex-basis: 33.33%
+    &:last-child .form__input
+      border-right-width: 1px
+  &__input
+    width: 100%
+    border-right-width: 0px
+  &__button
+    height: 80px
+    width: 100%
+
+@media (max-width: 1199px)
+  .offer
+    &__block
+      background-position: center right -10%
+@media (max-width: 991px)
+  .offer
+    &__block
+      background: #ffffff
+  .form
+    &__row
+      flex-direction: column
+      &-checkbox
+        display: flex
+        flex-direction: row
+    &__group
+      width: 100%
+    &__group:not(:last-child)
+      margin-bottom: 20px
+    &__input
+      border-width: 1px
+      height: 60px
+@media (max-width: 768px)
+  .offer
+    &__block
+      padding: 30px
+    &__title
+      font-size: 18px
+      margin-bottom: 20px
+    &__subtitle
+      font-size: 16px
+      margin-bottom: 40px
+  .form
+    &__row
+      &-checkbox
+        flex-direction: column
+    &__checkbox
+      margin-bottom: 20px
+      margin-right: auto
+    &__button
+      height: 60px
+      padding: 15px 30px
+
+      
+    
+
+
