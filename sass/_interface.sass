@@ -74,6 +74,19 @@ a
   clip: rect(0 0 0 0)
   overflow: hidden
 
+.section
+  padding: 100px 0
+  &-title
+    font-size: 30px
+    text-transform: uppercase
+    text-align: center
+    +bold
+
 @media (max-width: 576px)
   .button-o
     font-size: 10px
+
+  .section
+    padding: 60px 0
+    &-title
+      font-size: 20px
