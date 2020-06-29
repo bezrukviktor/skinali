@@ -1,0 +1,44 @@
+.blog
+  &-header
+    margin-bottom: 35px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__title
+      font-size: 24px
+      +bold
+    &__link
+      font-size: 16px
+      color: $primary
+      border-bottom: 1px solid lighten($primary, 10%)
+  &-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-card
+    max-width: 280px
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08);
+    &__title
+      min-height: 80px
+      line-height: 80px
+      font-size: 18px
+      color: #000000
+      text-align: center
+
+@media (max-width: 1199px)
+  .blog
+    &-wrap
+      justify-content: space-around
+      flex-wrap: wrap      
+    &-card
+      margin: 0 30px
+      margin-bottom: 20px
+@media (max-width: 768px)
+  .blog
+    &-header
+      flex-direction: column
+      &__title
+        text-align: center
+        margin-bottom: 20px
+
+

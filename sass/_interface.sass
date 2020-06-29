@@ -1,7 +1,8 @@
 body
   color: $text-color
   +reg
-  
+img
+  max-width: 100%
 a 
   text-decoration: none
   
@@ -15,8 +16,8 @@ a
   transition: 0.3s
   +bold
   &:hover
-      color: #ffffff
-      background-color: $primary
+    color: #ffffff
+    background-color: $primary
   
 .button
   font-size: 15px
@@ -29,8 +30,26 @@ a
   transition: 0.3s
   +bold
   &:hover
-      color: $primary
-      background-color: #fff
+    color: $primary
+    background-color: #fff
+  &-fitting
+    color: $primary
+    background-color: #fff    
+  &-order
+    color: #ffffff
+    background-color: lighten($primary, 10%)
+  &-like
+    background-color: $primary
+    width: 30px
+    height: 30px
+    text-align: center
+    position: relative
+    img
+      position: absolute
+      top: 50%
+      transform: translate(-50%, -50%)
+
+
 
 .bg-secondary
   background-color: $bg-secondary

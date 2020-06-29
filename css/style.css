@@ -50,6 +50,10 @@ body {
   font-family: 'Proxima Nova Regular', sans-serif;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   text-decoration: none;
 }
@@ -87,6 +91,31 @@ a {
 .button:hover {
   color: #507fe1;
   background-color: #fff;
+}
+
+.button-fitting {
+  color: #507fe1;
+  background-color: #fff;
+}
+
+.button-order {
+  color: #ffffff;
+  background-color: #7c9fe8;
+}
+
+.button-like {
+  background-color: #507fe1;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.button-like img {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .bg-secondary {
@@ -176,6 +205,7 @@ a {
   top: 0;
   width: 100%;
   background-color: #fff;
+  z-index: 100;
 }
 
 .navbar-wrap {
@@ -527,6 +557,196 @@ a {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-top: 60px;
+  }
+}
+
+.catalog {
+  background: #f1f1f1;
+}
+
+.catalog__block {
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.catalog__card {
+  margin-bottom: 30px;
+  position: relative;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  max-width: 570px;
+  -webkit-box-shadow: 6.553px 4.589px 21px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 6.553px 4.589px 21px 0px rgba(0, 0, 0, 0.1);
+}
+
+.catalog__card-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.catalog__card-button {
+  padding: 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  border: none;
+  height: 30px;
+}
+
+.catalog__card-tag {
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 12px;
+  color: #ffffff;
+  background-color: rgba(80, 127, 225, 0.6);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.catalog__card-image {
+  display: block;
+}
+
+.catalog__link {
+  text-align: center;
+}
+
+.catalog__button {
+  margin-top: 55px;
+  margin-bottom: 25px;
+}
+
+.catalog__button-description {
+  display: block;
+  font-size: 16px;
+}
+
+@media (max-width: 1199px) {
+  .catalog__card {
+    max-width: 470px;
+  }
+}
+
+@media (max-width: 991px) {
+  .catalog__block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 60px;
+  }
+  .catalog__card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 570px;
+  }
+  .catalog__card-tag {
+    padding: 5px;
+    font-size: 10px;
+  }
+  .catalog__button {
+    padding: 10px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .catalog__card {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .catalog__card-buttons {
+    position: relative;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
+.blog-header {
+  margin-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog-header__title {
+  font-size: 24px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.blog-header__link {
+  font-size: 16px;
+  color: #507fe1;
+  border-bottom: 1px solid #7c9fe8;
+}
+
+.blog-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.blog-card {
+  max-width: 280px;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.08);
+}
+
+.blog-card__title {
+  min-height: 80px;
+  line-height: 80px;
+  font-size: 18px;
+  color: #000000;
+  text-align: center;
+}
+
+@media (max-width: 1199px) {
+  .blog-wrap {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .blog-card {
+    margin: 0 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .blog-header__title {
+    text-align: center;
+    margin-bottom: 20px;
   }
 }
 /*# sourceMappingURL=style.css.map */
