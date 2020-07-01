@@ -31,8 +31,7 @@
       justify-content: space-around
       flex-wrap: wrap      
     &-card
-      margin: 0 30px
-      margin-bottom: 20px
+      margin: 0 30px 20px 30px
 @media (max-width: 768px)
   .blog
     &-header
@@ -40,5 +39,11 @@
       &__title
         text-align: center
         margin-bottom: 20px
-
+    &-card
+      margin: 0 0 10px 0
+      flex-basis: 49%
+@media (max-width: 576px)
+  .blog
+    &-card
+      flex-basis: 100%
 

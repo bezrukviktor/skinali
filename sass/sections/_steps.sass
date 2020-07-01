@@ -1,0 +1,66 @@
+.steps
+  background: $bg-secondary
+  &-block
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__item
+      position: relative
+      text-align: center
+      max-width: 165px
+    &__item:not(:last-child)
+      &::before      
+        content: ''
+        display: block
+        position: absolute
+        top: 60px
+        right: -60%
+        width: 100%
+        height: 2px
+        background-color: rgba(#bab9b8, .8)
+        
+    &__img
+      margin-bottom: 25px
+    &__title
+      font-size: 18px
+      margin-bottom: 25px
+      +bold
+    &__description
+      font-size: 14px
+
+@media (max-width: 1199px)
+  .steps
+    &-block
+      &__item  
+        max-width: 140px
+@media (max-width: 991px)
+  .steps
+    &-block
+      flex-wrap: wrap
+      &__item
+        flex-basis: 33%
+        min-width: 33%
+        margin-bottom: 20px
+      &__description
+      &__item:not(:last-child)
+        &::before
+          display: none
+      &__body
+        max-width: 70%
+        margin: auto
+@media (max-width: 768px)
+  .steps
+    &-block
+      &__item
+        flex-basis: 49%
+        min-width: 49%
+      &__body
+        max-width: 80%
+@media (max-width: 576px)
+  .steps
+    &-block
+      &__item
+        flex-basis: 100%
+        min-width: 100%
+      &__body
+        max-width: 70%
