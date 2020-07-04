@@ -1,0 +1,26 @@
+.contacts
+  background: $bg-secondary
+  &-block
+    display: flex
+    align-items: center
+    justify-content: space-around
+    text-align: center
+    &__info
+      display: block
+      margin-top: 25px
+      font-size: 16px
+      color: #000000
+      font-style: normal
+      text-decoration: none
+.map
+  margin-top: 43px
+
+@media (max-width: 768px)
+  .contacts
+    &-block
+      flex-wrap: wrap
+      flex-direction: column
+      &__item
+        margin-bottom: 25px
+
+

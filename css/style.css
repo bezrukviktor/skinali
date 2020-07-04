@@ -1133,4 +1133,47 @@ a {
     font-size: 16px;
   }
 }
+
+.contacts {
+  background: #f1f1f1;
+}
+
+.contacts-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+}
+
+.contacts-block__info {
+  display: block;
+  margin-top: 25px;
+  font-size: 16px;
+  color: #000000;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.map {
+  margin-top: 43px;
+}
+
+@media (max-width: 768px) {
+  .contacts-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contacts-block__item {
+    margin-bottom: 25px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
