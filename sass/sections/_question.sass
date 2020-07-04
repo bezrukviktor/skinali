@@ -1,0 +1,18 @@
+.question
+  background: $bg-secondary
+  text-align: center
+  &-text
+    font-size: 30px
+    margin-right: 50px
+    +bold
+  &-link
+    font-size: 24px
+    color: #5a8de2
+    border-bottom: 1px solid #5a8de2
+
+@media (max-width: 768px)
+  .question
+    &-text
+      display: block
+      margin: 0 0 25px 0
+

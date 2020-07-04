@@ -1136,6 +1136,7 @@ a {
 
 .contacts {
   background: #f1f1f1;
+  padding-bottom: 0;
 }
 
 .contacts-block {
@@ -1174,6 +1175,30 @@ a {
   }
   .contacts-block__item {
     margin-bottom: 25px;
+  }
+}
+
+.question {
+  background: #f1f1f1;
+  text-align: center;
+}
+
+.question-text {
+  font-size: 30px;
+  margin-right: 50px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.question-link {
+  font-size: 24px;
+  color: #5a8de2;
+  border-bottom: 1px solid #5a8de2;
+}
+
+@media (max-width: 768px) {
+  .question-text {
+    display: block;
+    margin: 0 0 25px 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
