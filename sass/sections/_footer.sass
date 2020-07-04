@@ -1,0 +1,62 @@
+.footer
+  background: #262626
+  padding: 40px 0
+  &-block
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    color: #ffffff
+  &__title
+    text-transform: uppercase
+    font-size: 18px
+  &__subtitle
+    font-size: 14px
+    display: block
+    margin-bottom: 50px
+  &__copy
+    font-size: 14px
+    color: #767676
+  &-payment
+    display: flex
+    align-items: center
+    &__img:not(:last-child)
+      margin-right: 28px
+  &-contacts
+    text-align: right
+  &__phone, &__mail
+    text-decoration: none
+    color: #fff
+  &__phone
+    display: block
+    font-size: 20px
+    margin-bottom: 20px
+    +bold
+  &__mail
+    display: block
+    font-size: 16px
+    margin-bottom: 20px
+  &-social
+    &__link:not(:last-child)
+      margin-right: 15px
+  &-social
+    &__link
+      img
+        width: 25px
+        height: 25px
+
+@media (max-width: 768px)
+  .footer
+    &-block
+      flex-direction: column
+      align-items: center
+      text-align: center
+    &-description
+      margin-top: 30px
+      order: 1
+    &-contacts
+      margin-top: 30px
+      text-align: center
+
+
+
+

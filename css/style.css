@@ -1184,6 +1184,7 @@ a {
 }
 
 .question-text {
+  display: inline-block;
   font-size: 30px;
   margin-right: 50px;
   font-family: 'Proxima Nova Semibold', sans-serif;
@@ -1199,6 +1200,107 @@ a {
   .question-text {
     display: block;
     margin: 0 0 25px 0;
+  }
+}
+
+.footer {
+  background: #262626;
+  padding: 40px 0;
+}
+
+.footer-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #ffffff;
+}
+
+.footer__title {
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.footer__subtitle {
+  font-size: 14px;
+  display: block;
+  margin-bottom: 50px;
+}
+
+.footer__copy {
+  font-size: 14px;
+  color: #767676;
+}
+
+.footer-payment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-payment__img:not(:last-child) {
+  margin-right: 28px;
+}
+
+.footer-contacts {
+  text-align: right;
+}
+
+.footer__phone, .footer__mail {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer__phone {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.footer__mail {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.footer-social__link:not(:last-child) {
+  margin-right: 15px;
+}
+
+.footer-social__link img {
+  width: 25px;
+  height: 25px;
+}
+
+@media (max-width: 768px) {
+  .footer-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  .footer-description {
+    margin-top: 30px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .footer-contacts {
+    margin-top: 30px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
