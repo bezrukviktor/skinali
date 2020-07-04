@@ -1,0 +1,42 @@
+.review
+  background: $bg-secondary
+  padding-bottom: 315px
+  &-block
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__item
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+    &__text
+      position: relative
+      background: #fff
+      padding: 22px
+      margin-bottom: 20px
+      border-radius: 10px
+      max-width: 370px
+      min-height: 140px
+      font-style: italic
+      font-size: 15px
+      line-height: 1.3
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: -30px
+        left: 50%
+        transform: translateX(-50%)
+        height: 10px
+        border: 10px solid transparent 
+        border-top: 10px solid #fff
+    &__img
+      max-width: 65px
+      max-height: 65px
+      border: 2px solid $primary
+      border-radius: 50%
+      margin-bottom: 20px
+
+
+

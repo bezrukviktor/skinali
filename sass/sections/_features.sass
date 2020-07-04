@@ -3,13 +3,15 @@
     display: flex
     justify-content: space-between
     flex-wrap: wrap
-    align-items: center
+    align-items: baseline
     &-text
       font-size: 20px
       padding-top: 34px
     &-item
       flex-basis: 33%
       text-align: center
+      margin-bottom: 100px
+      
 
 @media (max-width: 991px)
   .features
@@ -20,7 +22,12 @@
   .features
     &__block
       &-item
-        flex-basis: 100%
-      &-item:not(:last-child)
+        flex-basis: 50%
         margin-bottom: 60px
+@media (max-width: 576px)
+  .features
+    &__block
+      &-item
+        flex-basis: 100%
+
         

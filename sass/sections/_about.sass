@@ -1,0 +1,36 @@
+.about
+  &-block
+    display: flex
+    justify-content: center
+    &__text
+      max-width: 540px
+      font-size: 20px
+      line-height: 1.5
+  &-img
+    margin-right: 55px
+    max-width: 370px
+  &-text
+    margin-bottom: 10px
+    
+
+@media (max-width: 1199px)
+  .about
+    &-block
+      padding: 0
+
+@media (max-width: 991px)
+  .about
+    &-block
+      flex-wrap: wrap
+      &__text
+        text-align: center
+    &-img
+      margin: 0 0 20px 0
+
+@media (max-width: 576px)
+  .about
+    &-block
+      &__text
+        font-size: 16px
+
+
