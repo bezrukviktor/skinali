@@ -1,0 +1,61 @@
+.before
+  &-slider
+    max-width: 970px
+    margin: auto
+    &__item
+      overflow: hidden
+      max-width: 970px
+      margin: auto
+  &-after
+    img
+      width: 970px
+      height: 400px
+      object-fit: cover
+  &-wrap
+    position: relative
+
+.slider
+  &-arrow__next
+    position: absolute
+    top: 40%
+    right: 0
+    color: $bg-secondary
+    font-size: 40px
+  &-arrow__prev
+    position: absolute
+    top: 40%
+    left: 0
+    color: $bg-secondary
+    font-size: 40px
+.slick
+  &-dots
+    display: flex
+    justify-content: center
+    margin: 0
+    list-style: none
+    padding: 30px 0
+    .slick-active button
+      background: $primary
+    li 
+      margin: 0 10px
+      background: $bg-secondary
+      border-radius: 50%
+    button
+      display: block
+      width: 10px
+      height: 10px
+      padding: 0
+      border: 0
+      border-radius: 50%
+      font-size: 0
+
+@media (max-width: 576px)
+  .before
+    &-after
+      img
+        height: 200px
+  .slider
+    &-arrow__next
+      top: 30%
+    &-arrow__prev
+      top: 30%

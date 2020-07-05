@@ -47,9 +47,9 @@
     width: 100%
   &__policy
     display: block
-    padding-left: 30px
-    min-width: 390px
     font-size: 17px
+    margin-left: 30px
+    width: 400px
 
 @media (max-width: 1199px)
   .offer
@@ -59,7 +59,7 @@
       max-width: 600px
   .form
     &__policy
-      min-width: 350px
+      width: 100%
 @media (max-width: 991px)
   .offer
     &__block
@@ -80,6 +80,7 @@
     &__policy
       padding: 0
       text-align: center
+      margin-left: 0
 @media (max-width: 768px)
   .offer
     &__block
@@ -98,8 +99,15 @@
       margin-bottom: 20px
       margin-right: auto
     &__button
-      height: 60px
-      padding: 15px 30px
+      padding: 5px 20px
+      line-height: 1.5
+      white-space: normal
+      
+
+@media (max-width: 576px)
+  .form
+    &__policy
+      font-size: 14px
 
       
     

@@ -3,8 +3,12 @@ body
   +reg
 img
   max-width: 100%
-a 
+a, button
   text-decoration: none
+  cursor: pointer
+
+a:active, a:focus, button:active, button:focus 
+  outline: none
   
 .button-o
   font-size: 12px
@@ -99,10 +103,9 @@ a
     font-size: 30px
     text-transform: uppercase
     text-align: center
+    margin-bottom: 100px
     +bold
 
-.block
-  margin-top: 100px
 
 @media (max-width: 576px)
   .button-o
@@ -111,5 +114,4 @@ a
     padding: 60px 0
     &-title
       font-size: 20px
-  .block
-    margin-top: 60px
+      margin-bottom: 60px
