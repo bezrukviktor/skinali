@@ -42,4 +42,8 @@ $(document).ready(function () {
     }, 1000);
     e.preventDefault();
   });
+
+  $('.input-tel').mask('+00 (000) 000 00 00', {
+    placeholder: '+__ (___) ___ __ __'
+  });
 })
