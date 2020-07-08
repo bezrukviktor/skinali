@@ -22,6 +22,31 @@ $(document).ready(function () {
     e.stopPropagation();
   })
 
+  $(".before-after").twentytwenty({
+    before_label: 'без скинали',
+    after_label: 'со скинали'
+  });
+  $('.before-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    draggable: false,
+    dots: true,
+    fade: true,
+    cssEase: 'linear',
+    prevArrow: '.slider-arrow__prev',
+    nextArrow: '.slider-arrow__next'
+  })
+  $('.review-block').slick({
+    slidesToShow: 3,
+    responsive: [{
+      breakpoint: 991,
+      settings: {
+        slidesToShow: 1,
+        arrows: false
+      }
+    }]
+  })
+
   for (const option of document.querySelectorAll('.form-select__option')) {
     option.addEventListener('click', function () {
       if (!this.classList.contains('selected')) {
