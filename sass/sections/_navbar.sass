@@ -14,25 +14,24 @@
   &__phone
     display: block
     font-size: 19px
-    +bold
     margin-bottom: 5px
     color: $text-color
+    +bold
   &__work-time, &__email
     display: block
     font-size: 14px
     color: $text-color-secondary
-
 
 .menu
   position: fixed
   top: 80px
   width: 100%
   left: 0
-  padding: 16px 0
   background-color: $primary
-  transition: .2s
+  transition: .3s
   opacity: 0
   transform: translateY(-200%)
+  z-index: 99
   &_active
     transform: translateY(0)
     opacity: 1
@@ -41,54 +40,96 @@
     align-items: center
     justify-content: space-around
   &__link
+    display: flex
+    align-items: center
     font-size: 17px
     text-transform: uppercase
     color: #ffffff
+    height: 70px
   &-button
-    display: flex
-    flex-direction: column
-    align-items: center
-    justify-content: center
+    position: relative
     background-color: transparent
     border: none 
     border-right: 1px solid rgba(81, 11, 186, 0.1)
     border-left: 1px solid rgba(81, 11, 186, 0.1)
     height: 80px
     width: 70px
+    padding: 0 25px
+    transition: .3s ease-in-out
     &__line
       display: block
+      position: absolute
+      height: 3px
+      width: 20px
+      background: #507fe1
+      transform: rotate(0deg)
+      opacity: 1
+      transition: .3s ease-in-out
+    .hamburger::before
+      top: -10px
+    .hamburger::after
+      top: 10px
+    .hamburger::before, .hamburger::after
+      content: ''
+      position: absolute
+      left: 0
       height: 3px
       width: 20px
       background-color: #507fe1
-    &__line:not(:last-child)
-      margin-bottom: 5px
+      transition: .3s ease-in-out
+    &--active
+      .menu-button__line
+        visibility: hidden
+      .hamburger::before
+        top: 0
+        left: 0
+        transform: rotate(45deg)
+        visibility: visible
+      .hamburger::after
+        top: 0
+        left: 0
+        transform: rotate(-45deg) 
+        visibility: visible 
 
 .logo
   &__text
     display: block
     font-size: 18px
     text-transform: uppercase
-    +bold
     margin-bottom: 5px
+    +bold
   &__description
     display: block
     font-size: 14px
     color: $text-color-secondary
 
+@media (max-width: 1199px)
+  .menu
+    &__link
+      padding: 0 10px
+      font-size: 15px
+
 @media (max-width: 991px)
   .navbar
     &__mobile, &__landline
       display: none
-
+  .menu
+    &__link
+      padding: 0 5px
+      font-size: 12px
+      height: 50px
 @media (max-width: 576px)
   .logo
     display: none
+@media (max-width: 768px)
   .menu
     top: 60px
     &__nav
       flex-direction: column
-    &__link:not(:last-child)
-      margin-bottom: 20px
+    &__link
+      font-size: 17px
+    &__link
+      margin-bottom: 10px
     &-button 
       height: 60px
 

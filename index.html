@@ -20,13 +20,13 @@
     <div class="menu">
       <div class="container">
         <nav class="menu__nav">
-          <a href="#" class="menu__link">Главная</a>
-          <a href="#" class="menu__link">Продукция</a>
-          <a href="#" class="menu__link">Каталог</a>
-          <a href="#" class="menu__link">Примеры работ</a>
-          <a href="#" class="menu__link">Примерка изображений</a>
-          <a href="#" class="menu__link">Стоимость дилерам</a>
-          <a href="#" class="menu__link">О скинали</a>
+          <a href="#hero" class="menu__link">Главная</a>
+          <a href="#features" class="menu__link">Преимущества</a>
+          <a href="#catalog" class="menu__link">Каталог</a>
+          <a href="#prices" class="menu__link">Примеры работ</a>
+          <a href="#before" class="menu__link">Примерка изображений</a>
+          <a href="#prices" class="menu__link">Стоимость дилерам</a>
+          <a href="#about" class="menu__link">О скинали</a>
         </nav>
       </div>
     </div>
@@ -34,9 +34,7 @@
       <div class="container">
         <div class="navbar-wrap">
           <button class="menu-button navbar__menu-button">
-            <span class="menu-button__line"></span>
-            <span class="menu-button__line"></span>
-            <span class="menu-button__line"></span>
+            <span class="menu-button__line hamburger"></span>
           </button>
           <div class="logo navbar__logo">
             <strong class="logo__text">Фабрика скинали №1</strong>
@@ -50,13 +48,13 @@
             <a class="navbar__phone" href="tel:+79121234567">+7 499 123-45-67</a>
             <a class="navbar__email" href="mailto: info@mail.cu">info@mail.cu</a>
           </div>
-          <button class="button-o navbar__button">Получить консультацию</button>
+          <a href="#offer" class="button-o navbar__button">Получить консультацию</a>
         </div>
         <!-- /.navbar-wrap -->
       </div>
     </div>
     <!-- /.navbar -->
-    <div class="hero">
+    <div class="hero" id="hero">
       <div class="container">
         <h1 class="hero__title">
           Гарантия минимальной цены на скинали
@@ -70,24 +68,34 @@
   </header>
 
   <main>
-    <section class="offer bg-secondary">
+    <section class="offer bg-secondary" id="offer">
       <div class="container">
         <div class="offer__block offer-block offer-block_calc-bg">
           <h2 class="offer__title">Оставьте заявку на расчет</h2>
           <span class="offer__subtitle">и получите скидку 30% на изготовление скинали или фартука для кухни</span>
           <form action="#" class="form offer__form">
             <div class="form__row">
-              <div class="form__group">
+              <div class="form__group form-group__select">
                 <label for="" class="form__label">Вид стекла</label>
-                <input type="text" class="input form__input">
+                <div class="form-select">
+                  <div class="form-select__trigger">
+                    <span class="form-select__value">С печатью</span>
+                    <div class="form-select__arrow"></div>
+                  </div>
+                  <div class="form-select__options">
+                    <span class="form-select__option selected" data-value="С печатью">С печатью</span>
+                    <span class="form-select__option" data-value="Зеркало">Зеркало</span>
+                    <span class="form-select__option" data-value="Узорное стекло">Узорное стекло</span>
+                  </div>
+                </div>
               </div>
               <div class="form__group">
                 <label for="" class="form__label">Ширина, см</label>
-                <input type="text" class="input form__input">
+                <input type="number" min="0" class="input form__input">
               </div>
               <div class="form__group">
                 <label for="" class="form__label">Высота, см</label>
-                <input type="text" class="input form__input">
+                <input type="number" min="0" class="input form__input">
               </div>
             </div>
             <div class="form__row form__row-checkbox">
@@ -119,7 +127,7 @@
         </div>
       </div>
     </section>
-    <section class="section features">
+    <section class="section features" id="features">
       <div class="container">
         <h2 class="section-title">Наши преимущества</h2>
         <div class="features__block block">
@@ -150,7 +158,7 @@
         </div>
       </div>
     </section>
-    <section class="section catalog">
+    <section class="section catalog" id="catalog">
       <div class="container">
         <h2 class="section-title">Каталог скинали</h2>
         <div class="catalog__block block">
@@ -160,7 +168,7 @@
             <div class="catalog__card-buttons">
               <button class="button-fitting catalog__card-button">Примерить онлайн</button>
               <button class="button-order catalog__card-button">Заказать</button>
-              <div class="button-like"><img src="./img/catalog/like.png" alt="like"></div>
+              <div class="catalog__button-like"><i class="far fa-heart"></i></div>
             </div>
           </div>
           <div class="catalog__card">
@@ -169,7 +177,7 @@
             <div class="catalog__card-buttons">
               <button class="button-fitting catalog__card-button">Примерить онлайн</button>
               <button class="button-order catalog__card-button">Заказать</button>
-              <div class="button-like"><img src="./img/catalog/like.png" alt="like"></div>
+              <div class="catalog__button-like"><i class="far fa-heart"></i></div>
             </div>
           </div>
           <div class="catalog__card">
@@ -178,7 +186,7 @@
             <div class="catalog__card-buttons">
               <button class="button-fitting catalog__card-button">Примерить онлайн</button>
               <button class="button-order catalog__card-button">Заказать</button>
-              <div class="button-like"><img src="./img/catalog/like.png" alt="like"></div>
+              <div class="catalog__button-like"><i class="far fa-heart"></i></div>
             </div>
           </div>
           <div class="catalog__card">
@@ -187,7 +195,7 @@
             <div class="catalog__card-buttons">
               <button class="button-fitting catalog__card-button">Примерить онлайн</button>
               <button class="button-order catalog__card-button">Заказать</button>
-              <div class="button-like"><img src="./img/catalog/like.png" alt="like"></div>
+              <div class="catalog__button-like"><i class="far fa-heart"></i></div>
             </div>
           </div>
           <div class="catalog__card">
@@ -196,7 +204,7 @@
             <div class="catalog__card-buttons">
               <button class="button-fitting catalog__card-button">Примерить онлайн</button>
               <button class="button-order catalog__card-button">Заказать</button>
-              <div class="button-like"><img src="./img/catalog/like.png" alt="like"></div>
+              <div class="catalog__button-like"><i class="far fa-heart"></i></div>
             </div>
           </div>
           <div class="catalog__card">
@@ -205,7 +213,7 @@
             <div class="catalog__card-buttons">
               <button class="button-fitting catalog__card-button">Примерить онлайн</button>
               <button class="button-order catalog__card-button">Заказать</button>
-              <div class="button-like"><img src="./img/catalog/like.png" alt="like"></div>
+              <div class="catalog__button-like"><i class="far fa-heart"></i></div>
             </div>
           </div>
           <div class="catalog__card">
@@ -214,7 +222,7 @@
             <div class="catalog__card-buttons">
               <button class="button-fitting catalog__card-button">Примерить онлайн</button>
               <button class="button-order catalog__card-button">Заказать</button>
-              <div class="button-like"><img src="./img/catalog/like.png" alt="like"></div>
+              <div class="catalog__button-like"><i class="far fa-heart"></i></div>
             </div>
           </div>
           <div class="catalog__card">
@@ -223,7 +231,7 @@
             <div class="catalog__card-buttons">
               <button class="button-fitting catalog__card-button">Примерить онлайн</button>
               <button class="button-order catalog__card-button">Заказать</button>
-              <div class="button-like"><img src="./img/catalog/like.png" alt="like"></div>
+              <div class="catalog__button-like"><i class="far fa-heart"></i></div>
             </div>
           </div>
         </div>
@@ -267,7 +275,7 @@
         </div>
       </div>
     </section>
-    <section class="section prices">
+    <section class="section prices" id="prices">
       <div class="container">
         <h2 class="section-title">Цены и виды скинали</h2>
         <div class="prices-block block">
@@ -354,7 +362,7 @@
         </div>
       </div>
     </section>
-    <section class="section steps">
+    <section class="section steps" id="steps">
       <div class="container">
         <h2 class="section-title">Этапы работ</h2>
         <div class="steps-block block">
@@ -403,7 +411,7 @@
         </div>
       </div>
     </section>
-    <section class="section before">
+    <section class="section before" id="before">
       <div class="container">
         <h2 class="section-title">До и после</h2>
         <div class="before-wrap">
@@ -432,7 +440,7 @@
         </div>
       </div>
     </section>
-    <section class="section review">
+    <section class="section review" id="review">
       <div class="container">
         <h2 class="section-title">Отзывы наших клиентов</h2>
         <div class="review-block">
@@ -476,7 +484,7 @@
                 <input type="text" class="input form__input" placeholder="Ваш телефон">
               </div>
               <div class="form__group">
-                <input type="text" class="input form__input" placeholder="Ваша цена">
+                <input type="number" class="input form__input" placeholder="Ваша цена">
               </div>
             </div>
             <div class="form__row">
@@ -492,7 +500,7 @@
         </div>
       </div>
     </section>
-    <section class="section about">
+    <section class="section about" id="about">
       <div class="container">
         <h2 class="section-title">О производстве</h2>
         <div class="about-block block">
@@ -581,6 +589,7 @@
   <script src="js/jquery.event.move.js"></script>
   <script src="js/jquery.twentytwenty.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/main.js"></script>
   <script>
     $(window).load(function () {
       $(".before-after").twentytwenty({

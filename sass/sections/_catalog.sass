@@ -10,11 +10,20 @@
     flex-basis: 50%
     max-width: 570px
     box-shadow: 6.553px 4.589px 21px 0px rgba(0, 0, 0, 0.1)
+    overflow: hidden
+    &:hover
+      .catalog__card-buttons
+        bottom: 0
+        opacity: 1
+        z-index: 1
     &-buttons
       display: flex
       position: absolute
-      bottom: 0
+      bottom: -30px
+      opacity: 0
       right: 0
+      z-index: -1
+      transition: 0.3s
     &-button
       padding: 10px
       font-size: 11px
@@ -39,6 +48,15 @@
     margin-top: 55px
     margin-bottom: 25px
     padding: 30px
+    &-like
+      display: flex
+      align-items: center
+      background-color: $primary
+      i
+        color: #fff
+        padding: 0 5px
+      .liked
+        background-color: #fff
     &-description
       display: block
       font-size: 16px
@@ -57,7 +75,11 @@
       max-width: 570px
       &-tag
         padding: 5px
-        font-size: 10px       
+        font-size: 10px 
+      &-buttons
+        opacity: 1
+        z-index: 0
+        bottom: 0     
     &__button
       padding: 10px
       line-height: 25px
